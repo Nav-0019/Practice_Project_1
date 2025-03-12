@@ -15,13 +15,14 @@ class Isekai:
 
     
 player1 = Isekai(input("1. Create a character : "))
-while player1:
+while True:
     print(f"Welcome to isekai! You are a {player1.name} with level {player1.level}.")
     print(f"{player1.name} is a {player1.position[player1.level]} with a {player1.weapon[player1.level]}.")
    
     while True:
         if player1.level == 5:
             print(f"{player1.name} have defeated the final boss and saved the world!")
+            exit = False
             break
         else:
             print(f"Attention! {player1.monster[player1.level]} is infront of you!")
@@ -53,12 +54,15 @@ while player1:
                         
             elif choice == "2":
                 print(f"{player1.name} ran away.")
+                exit = False
                 break
 
             elif choice == "3":
                 print(f"{player1.name} exited the game.")
+                exit = False
                 break
-    
+    if not exit:
+        break
     
 
 
