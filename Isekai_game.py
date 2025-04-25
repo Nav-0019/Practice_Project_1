@@ -1,7 +1,5 @@
 import random as rm
 
-
-
 class Isekai:
     def __init__(self, name):
         self.name = name
